@@ -1,52 +1,56 @@
 # Go-REST-MySQL
 
-**_MySQL_**
-CREATE DATABASE game;
+## **_MySQL_**
 
-USE game;
-
-CREATE TABLE action (
-
-Id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-
-userId int NOT NULL,
-
-gameId int NOT NULL,
-
-action TEXT NOT NULL
-
-);
+we have to create our database with action table, so run file "db.sql"
 
 ---
 
-**_POSTMAN_**
+## **_Go_**
 
-Sent request POST
+You have to download my file "main.go"
 
-userId int
+We have to import packages "github.com/go-sql-driver/mysql" and "github.com/gorilla/mux", so use this command belows:
 
-gameId int
+`go get github.com/go-sql-driver/mysql`
 
-action string
+`go get github.com/gorilla/mux`
 
-I use Postman to send request
+You have to set `userDB, passDB` to your database game in file `main.go`
+
+Then we have to run file "main.go" with command:
+
+`go run main.go`
 
 ---
 
-**_Router_**
+## ****Send POST Request****
+
+We can use `curl` or `Postman`
+
+**CURL**
+
+`curl -d "userId=2&gameId=3&action=23,32" -X POST http://localhost:8000/create`
+
+**POSTMAN**
+
+postman is a program which help send requests and is very helpful.
+
+`userId int`
+
+`gameId int`
+
+`action string`
+
+![postman](/image/postman.png)
+Format: ![program postman](url)
+
+---
+
+## **_Router_**
 
 / - HomePage
 
-/all - Show all requests
+/all - Show all records from action table in JSON
 
-/create - save to database MySQL
-
----
-
-**_GO-Command_**
-
-go get github.com/go-sql-driver/mysql
-
-go get github.com/gorilla/mux
-
-go run main.go
+/create - save data to our database MySQL

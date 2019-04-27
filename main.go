@@ -12,7 +12,7 @@ import (
 )
 
 const userDB = "root"
-const passDB = ""
+const passDB = "prezes11"
 const nameDB = "game"
 
 type Action struct {
