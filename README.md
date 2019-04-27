@@ -24,7 +24,7 @@ Then we have to run file "main.go" with command:
 
 ---
 
-## ****Send POST Request****
+## \***\*Send POST Request\*\***
 
 We can use `curl` or `Postman`
 
