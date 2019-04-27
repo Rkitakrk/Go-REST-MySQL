@@ -4,6 +4,8 @@
 
 we have to create our database with action table, so run file "db.sql"
 
+![postman](/image/mysql.png)
+
 ---
 
 ## **_Go_**
@@ -43,7 +45,8 @@ postman is a program which help send requests and is very helpful.
 `action string`
 
 ![postman](/image/postman.png)
-Format: ![program postman](url)
+
+![postman](/image/json.png)
 
 ---
 
